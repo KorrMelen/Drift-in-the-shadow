@@ -6,7 +6,7 @@ import Menus.*;
 import java.util.ArrayList;
 
 public class Game {
-  ArrayList<Menu> menuStack = new ArrayList();
+  ArrayList<Menu> menuStack = new ArrayList<>();
   Menu currentMenu = null;
 
   Game(){

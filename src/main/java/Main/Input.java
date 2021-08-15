@@ -26,4 +26,12 @@ public class Input {
   public void release(char c) {
     keys.put(c,false);
   }
+
+  public boolean isKeyPressed(char c) {
+    return keys.get(c) != null;
+  }
+
+  public Point[] clicksPositions() {
+    return (Point[]) clicks.toArray();
+  }
 }
