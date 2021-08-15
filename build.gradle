@@ -13,7 +13,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     // https://mvnrepository.com/artifact/cz.advel.jbullet/jbullet
-    implementation 'cz.advel.jbullet:jbullet:20101010'
+    implementation 'org.jbox2d:jbox2d:2.1.2.2'
 }
 
 test {
