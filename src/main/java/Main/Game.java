@@ -22,7 +22,6 @@ public class Game {
     }
   }
       
-
   public void update(Input inputs){
     Menu next = currentMenu.update(inputs);
     switchMenu(next);
