@@ -17,6 +17,11 @@ class Frame extends JPanel implements KeyListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    public void close() {
+        // TODO call a menu to close instead
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+    }
+
     @Override
     public void paintComponent(Graphics g){
         g.setColor(Color.black);
@@ -32,7 +37,7 @@ class Frame extends JPanel implements KeyListener {
     public void keyPressed(KeyEvent e) {
       System.out.println(e.getKeyCode());
         switch(e.getKeyCode()) {
-            case 27 : frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)); break;
+            case 27 : close(); break;
         }
     }
 
