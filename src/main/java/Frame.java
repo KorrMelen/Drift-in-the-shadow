@@ -4,11 +4,14 @@ import java.awt.event.*;
 
 class Frame extends JPanel implements KeyListener {
     JFrame frame = new JFrame();
-    static int width = 1280;
-    static int height = 720;
+    private int width;
+    private int height;
 
-    Frame() {
-        this.setPreferredSize(new Dimension(width,height));
+    Frame(){
+        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+        this.width = size.width;
+        this.height = size.height;
+        this.setPreferredSize(new Dimension(this.width,this.height));
         frame.setResizable(true);
         frame.setContentPane(this);
         frame.pack();
