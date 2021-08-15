@@ -18,6 +18,7 @@ class Frame extends JPanel implements KeyListener, MouseListener {
         frame.pack();
         frame.setVisible(true);
         frame.addKeyListener(this);
+        frame.addMouseListener(this);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -78,6 +79,7 @@ class Frame extends JPanel implements KeyListener, MouseListener {
     public void mouseClicked(MouseEvent e) {}
     @Override
     public void mousePressed(MouseEvent e) {
+      System.out.println(e.getPoint());
       inputs.click(e.getPoint());
     }
     @Override

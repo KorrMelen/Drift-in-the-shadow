@@ -17,7 +17,7 @@ public class Game {
     if (menu == null) {
       currentMenu = menuStack.remove(menuStack.size()-1);
     } else {
-      menuStack.add(currentMenu);
+      if(currentMenu != null) menuStack.add(currentMenu);
       currentMenu = menu;
     }
   }
