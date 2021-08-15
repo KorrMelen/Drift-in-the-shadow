@@ -11,7 +11,7 @@ import javax.swing.*;
 public class Home implements Menu{
 
     private Button[] buttons = new Button[]{
-            new Button(Setting.width/2-125, Setting.height/2-30,250,30,"Let's play a game")
+            new Button(Setting.width/2-125, Setting.height/4-30,250,30,"Let's play a game")
     };
 
     @Override

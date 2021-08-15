@@ -11,7 +11,7 @@ public class Button {
     private int width;
     private int height;
     private String label;
-    private int[] margin;
+    private Point margin;
     private Font font;
     private int borderSize;
 
@@ -21,7 +21,7 @@ public class Button {
         this.width=_width;
         this.height=_height;
         this.label=_label;
-        this.margin = new int[]{10,7};
+        this.margin = new Point(10,7);
         this.borderSize = 10;
         this.font = new Font("Courier", Font.BOLD, 20);
     }
@@ -31,7 +31,7 @@ public class Button {
         _graphics.drawRoundRect(this.x, this.y, this.width, this.height,borderSize,borderSize);
         _graphics.setFont(font);
         _graphics.setColor(Color.RED);
-        _graphics.drawString(this.label, this.x+margin[0], this.y+this.height-margin[1]);
+        _graphics.drawString(this.label, this.x+this.margin.x, this.y+this.height-this.margin.y);
     }
 
     public void changeFont(Font _font){
@@ -39,11 +39,11 @@ public class Button {
     }
 
     public void changeMarginX(int x){
-        this.margin[0]=x;
+        this.margin.x=x;
     }
 
     public void changeMarginY(int y){
-        this.margin[1]=y;
+        this.margin.y=y;
     }
 
     public void changeMargin(int x,int y){
