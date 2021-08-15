@@ -27,8 +27,6 @@ class Frame extends JPanel implements KeyListener {
         g.setColor(Color.black);
         g.fillRect(0,0,this.getWidth(),this.getHeight());
     }
-    
-    
 
     @Override
     public void keyTyped(KeyEvent e) {}
