@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-class Frame extends JPanel implements KeyListener{
+class Frame extends JPanel implements KeyListener {
     JFrame frame = new JFrame();
     static int width = 1280;
     static int height = 720;
@@ -30,8 +30,9 @@ class Frame extends JPanel implements KeyListener{
     
     @Override
     public void keyPressed(KeyEvent e) {
+      System.out.println(e.getKeyCode());
         switch(e.getKeyCode()) {
-            case 90 : System.out.println("A"); break;
+            case 27 : frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)); break;
         }
     }
 
