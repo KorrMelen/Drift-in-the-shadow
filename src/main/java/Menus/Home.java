@@ -7,8 +7,8 @@ import javax.swing.*;
 public class Home implements Menu{
 
     @Override
-    public Menu Update(Input _inputs) {
-        return null;
+    public Menu update(Input _inputs) {
+        return this;
     }
 
     @Override

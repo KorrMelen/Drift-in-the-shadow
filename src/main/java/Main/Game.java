@@ -1,10 +1,11 @@
 package Main;
 
-import java.awt.*;
+import java.awt.Graphics;
 import javax.swing.*;
 import Menus.*;
+import java.util.ArrayList;
 
-class Game {
+public class Game {
   ArrayList<Menu> menuStack = new ArrayList();
   Menu currentMenu = null;
 
@@ -13,7 +14,7 @@ class Game {
   }
 
   void switchMenu(Menu menu) {
-    if menu == null {
+    if (menu == null) {
       currentMenu = menuStack.remove(menuStack.size()-1);
     } else {
       menuStack.add(currentMenu);
@@ -23,7 +24,7 @@ class Game {
       
 
   public void update(Input inputs){
-    next = currentMenu.update(inputs);
+    Menu next = currentMenu.update(inputs);
     switchMenu(next);
   }
 
