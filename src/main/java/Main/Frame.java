@@ -12,10 +12,7 @@ class Frame extends JPanel implements KeyListener, MouseListener {
     private int height;
 
     Frame(){
-        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-        this.width = size.width;
-        this.height = size.height;
-        this.setPreferredSize(new Dimension(this.width,this.height));
+        this.setPreferredSize(new Dimension(Setting.width ,Setting.height));
         frame.setResizable(true);
         frame.setContentPane(this);
         frame.pack();
