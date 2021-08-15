@@ -6,6 +6,8 @@ import java.awt.event.*;
 
 class Frame extends JPanel implements KeyListener {
     JFrame frame = new JFrame();
+    Game game = new Game();
+    Input inputs = new Input();
     private int width;
     private int height;
 
@@ -31,6 +33,8 @@ class Frame extends JPanel implements KeyListener {
     public void paintComponent(Graphics g){
         g.setColor(Color.black);
         g.fillRect(0,0,this.getWidth(),this.getHeight());
+        game.update(inputs); // FIXME put update outside of paintcomponents
+        game.draw(g);
     }
 
     @Override
