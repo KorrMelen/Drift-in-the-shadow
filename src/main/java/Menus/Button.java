@@ -14,8 +14,10 @@ public class Button {
     private Point margin;
     private Font font;
     private int borderSize;
+    public String tag;
 
-    Button(int _posX,int _posY,int _width, int _height,String _label){
+    Button(String _tag,int _posX,int _posY,int _width, int _height,String _label){
+        this.tag=_tag;
         this.x=_posX;
         this.y=_posY;
         this.width=_width;
