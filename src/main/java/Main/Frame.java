@@ -8,14 +8,9 @@ class Frame extends JPanel implements KeyListener {
     JFrame frame = new JFrame();
     Game game = new Game();
     Input inputs = new Input();
-    private int width;
-    private int height;
 
     Frame(){
-        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-        this.width = size.width;
-        this.height = size.height;
-        this.setPreferredSize(new Dimension(this.width,this.height));
+        this.setPreferredSize(new Dimension(Setting.width ,Setting.height));
         frame.setResizable(true);
         frame.setContentPane(this);
         frame.pack();
