@@ -6,7 +6,7 @@ import java.awt.Point;
 
 public class Input {
   ArrayList<Point> clicks = new ArrayList();
-  HashMap<Character,Boolean> keys = new HashMap();
+  HashMap<Character,Boolean> keys = new HashMap<>();
   boolean shift = false;
   boolean ctrl = false;
   boolean esc = false;

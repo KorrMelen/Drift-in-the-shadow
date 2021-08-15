@@ -18,7 +18,7 @@ class Frame extends JPanel implements KeyListener, MouseListener {
         frame.pack();
         frame.setVisible(true);
         frame.addKeyListener(this);
-        frame.addMouseListener(this);
+        this.addMouseListener(this);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
