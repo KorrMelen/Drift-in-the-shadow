@@ -79,7 +79,6 @@ class Frame extends JPanel implements KeyListener, MouseListener {
     public void mouseClicked(MouseEvent e) {}
     @Override
     public void mousePressed(MouseEvent e) {
-      System.out.println(e.getPoint());
       inputs.click(e.getPoint());
     }
     @Override

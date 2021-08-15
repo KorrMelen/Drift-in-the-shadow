@@ -31,7 +31,7 @@ public class Input {
     return keys.get(c) != null;
   }
 
-  public Point[] clicksPositions() {
-    return (Point[]) clicks.toArray();
+  public ArrayList<Point> clicksPositions() {
+    return clicks;
   }
 }
