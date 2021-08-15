@@ -1,5 +1,2 @@
-/.gradle/checksums/
 /build/
-/.gradle/7.1/executionHistory/
-
-.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/
