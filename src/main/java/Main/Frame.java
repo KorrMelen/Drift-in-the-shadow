@@ -1,5 +1,7 @@
 package Main;
 
+import Menus.Home;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -23,11 +25,12 @@ class Frame extends JPanel implements KeyListener, MouseListener {
     }
 
     public void run() {
-        while(true) { 
-        if (inputs.esc) {
+        while(true) {
+        game.update(inputs);
+
+        if(game.currentMenu instanceof Home && ((Home) game.currentMenu).quitTheGame)
             close();
-        }
-        game.update(inputs); 
+
         inputs.clear();
             frame.repaint();
 
