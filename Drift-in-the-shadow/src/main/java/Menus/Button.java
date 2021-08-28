@@ -1,8 +1,5 @@
 package Menus;
 
-import Main.Input;
-import Main.Setting;
-
 import java.awt.*;
 
 public class Button {

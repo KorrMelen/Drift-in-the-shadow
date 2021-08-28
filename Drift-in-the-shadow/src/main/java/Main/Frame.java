@@ -1,7 +1,7 @@
 package Main;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 class Frame extends JPanel implements KeyListener, MouseListener {

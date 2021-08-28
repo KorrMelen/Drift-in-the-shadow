@@ -1,7 +1,9 @@
 package Main;
 
-import java.awt.Graphics;
-import Menus.*;
+import Menus.Home;
+import Menus.Menu;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Game {

@@ -1,2 +1,3 @@
-rootProject.name = 'Dirft-in-the-shadow'
+rootProject.name = 'Drift-in-the-shadow'
+include('Drift-in-the-shadow')
 

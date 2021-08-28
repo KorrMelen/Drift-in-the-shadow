@@ -4,9 +4,6 @@ import Main.Input;
 import Main.Setting;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Set;
-import javax.swing.*;
 
 public class Home implements Menu{
 
