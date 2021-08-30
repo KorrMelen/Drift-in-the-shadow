@@ -2,12 +2,10 @@ package Menus;
 
 import Main.Input;
 
+import javax.swing.*;
 import java.awt.*;
 
-public class Option extends Menu {
-    @Override
-    public Menu update(Input _inputs) {
-        return this;
-    }
+public class Option extends JPanel {
+
 
 }

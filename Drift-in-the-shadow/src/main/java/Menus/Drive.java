@@ -2,14 +2,11 @@ package Menus;
 
 import Main.Input;
 
+import javax.swing.*;
 import java.awt.*;
 
-public class Drive extends Menu {
+public class Drive extends JPanel {
     private Car car;
 
-    @Override
-    public Menu update(Input _inputs) {
-        return this;
-    }
 
 }
