@@ -11,7 +11,6 @@ import java.awt.event.WindowEvent;
 
 public class Home extends JPanel {
 
-    public boolean quitTheGame = false;
     public Frame frame;
     private Button playButton = new Button("Jouer") ;
     private Button settingButton = new Button("Option");
@@ -27,7 +26,9 @@ public class Home extends JPanel {
         this.setBackground(Color.BLACK);
         this.setLayout(null);
         this.frame = _frame;
+
         playButton.setBounds(this.getWidth()/2-100,this.getHeight()/2-150,100,30);
+        playButton.setBackground(Color.white);
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,16 +37,20 @@ public class Home extends JPanel {
                 frame.repaint();
             }
         });
+
         settingButton.setBounds(this.getWidth()/2-100,this.getHeight()/2-100,100,30);
+        settingButton.setBackground(Color.white);
         settingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.removeAll();
-                frame.add(new Option());
+                frame.add(new Option(frame));
                 frame.repaint();
             }
         });
+
         quitButton.setBounds(this.getWidth()/2-100,this.getHeight()/2-50,100,30);
+        quitButton.setBackground(Color.white);
         quitButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
