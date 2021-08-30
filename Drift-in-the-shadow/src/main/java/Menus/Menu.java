@@ -1,10 +1,10 @@
 package Menus;
 import Main.*;
 
+import javax.swing.*;
 import java.awt.Graphics;
 
-public interface Menu {
-    public Menu update(Input _inputs);
+public abstract class Menu extends JPanel {
+    public abstract Menu update(Input _inputs);
 
-    public void draw(Graphics _graphics);
 }

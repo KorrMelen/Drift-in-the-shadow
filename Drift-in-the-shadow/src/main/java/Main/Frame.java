@@ -1,57 +1,28 @@
 package Main;
 
 import Menus.Home;
+import Menus.Menu;
 
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
-class Frame extends JPanel implements KeyListener, MouseListener {
-    JFrame frame = new JFrame();
-    Game game = new Game();
+class Frame extends JFrame implements KeyListener, MouseListener {
+    ArrayList<Menu> menuStack = new ArrayList<>();
+    Menu currentMenu = null;
     volatile Input inputs = new Input();
-    private int width;
-    private int height;
 
     Frame(){
-        this.setPreferredSize(new Dimension(Setting.width ,Setting.height));
-        frame.setResizable(true);
-        frame.setContentPane(this);
-        frame.pack();
-        frame.setVisible(true);
-        frame.addKeyListener(this);
+        this.setSize(new Dimension(Setting.width ,Setting.height));
+        this.setResizable(true);
+        //this.setContentPane(this);
+        //this.pack();
+        this.addKeyListener(this);
         this.addMouseListener(this);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public void run() {
-        while(true) {
-        game.update(inputs);
-
-        if(game.currentMenu instanceof Home && ((Home) game.currentMenu).quitTheGame)
-            close();
-
-        inputs.clear();
-            frame.repaint();
-
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
-        }
-    }
-
-    public void close() {
-        // TODO call a menu to close instead
-        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-    }
-
-    @Override
-    public void paintComponent(Graphics g){
-        g.setColor(Color.black);
-        g.fillRect(0,0,this.getWidth(),this.getHeight());
-        game.draw(g);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.add(new Home(this));
+        this.setVisible(true);
     }
 
     @Override
@@ -90,4 +61,5 @@ class Frame extends JPanel implements KeyListener, MouseListener {
     public void mouseEntered(MouseEvent e) {}
     @Override
     public void mouseExited(MouseEvent e) {}
+
 }

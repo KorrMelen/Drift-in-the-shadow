@@ -4,7 +4,7 @@ import Main.Input;
 
 import java.awt.*;
 
-public class Drive implements Menu{
+public class Drive extends Menu {
     private Car car;
 
     @Override
@@ -12,8 +12,4 @@ public class Drive implements Menu{
         return this;
     }
 
-    @Override
-    public void draw(Graphics _graphics) {
-
-    }
 }

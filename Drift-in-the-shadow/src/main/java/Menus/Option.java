@@ -4,14 +4,10 @@ import Main.Input;
 
 import java.awt.*;
 
-public class Option implements Menu{
+public class Option extends Menu {
     @Override
     public Menu update(Input _inputs) {
         return this;
     }
 
-    @Override
-    public void draw(Graphics _graphics) {
-
-    }
 }

@@ -10,6 +10,5 @@ public class Main {
         Setting.width = size.width;
 
         Frame f = new Frame();
-        f.run();
     }
 }
